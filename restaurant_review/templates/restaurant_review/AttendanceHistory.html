@@ -1,0 +1,23 @@
+{% extends "restaurant_review/navbar.html" %}
+
+{% block body %}
+<h1>Attendance History</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Attendance Date</th>
+                <th></th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for record in attendance_records %}
+            <tr>
+                <td>{{ record.attendance_date }}</td>
+                <td></td> 
+                <td>{{ record.timestamp }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock body %}
